@@ -1,0 +1,36 @@
+plot sin(x)
+
+set xrange [-pi:pi]
+replot cos(x) with points pointtype 2
+#[-pi:] only min or [:pi] only max
+#replot means add a new graph to the previous one
+
+plot [-pi:pi] sin(x), cos(x) with points pointtype 2
+
+plot sin(x), '1.dat' 
+
+set title 'My first graph'
+set xrange [-pi:pi]\
+set xtics ('0' 0, '90' pi/2, '-90' -pi/2, '45' pi/4, '-45' -pi/4, '135' 3*pi/4, '-135' -3*pi/4)
+set grid
+set xlable 'Angle, in degrees'
+set ylabel 'sin(angle)'
+plot sin(x)
+
+plot sin(x) with linespoints pointtype 5, cos(x) w boxes lt 4
+#lt : linetype
+#pt : pointtype
+#w : with
+
+set key top left
+set key box 
+plot [-pi:pi] sin(x) title 'sinusoid' with linespoints pointtype 5, cos(x) t 'cosine' w boxes lt 4
+
+multiplot
+#plot multiple graphs 
+
+splot???
+
+pm3d graph???
+
+
